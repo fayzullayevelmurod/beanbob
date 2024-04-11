@@ -109,6 +109,28 @@ button {
 }
 /* Header end */
 
+/* Play music */
+.play-music{
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 51px;
+    height: 51px;
+    border-radius: 100%;
+    border: 2px solid rgb(57, 99, 51);
+}
+.play-music .play{
+    padding-left: 3px;
+}
+.play-music .pause{
+    width: 100%;
+    border-radius: 100%;
+    mix-blend-mode: color-burn;
+}
+/* Play music */
 
 /* Home start */
 .home{
@@ -185,4 +207,124 @@ button {
     align-items: center;
     gap: 16px;
 }
+
+.home .home-bobs{
+    display: flex;
+    align-items: center;
+    margin-top: 60px;
+}
+.home .home-bobs .home-bobs-img{
+    object-fit: contain;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(-100%, 0);
+    }
+}
 /* Home end */
+
+/* Partners start */
+.partners{
+    padding: 68px 0 110px;
+}
+.partners .partners-content{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.partners-content .partners-title{
+    color: rgb(57, 99, 51);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 48px;
+    text-transform: uppercase;
+    padding-left: 95px;
+}
+.partners-content .partners-logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.partners-content .partners-logo-link{
+    border-radius: 30px;
+    background: rgb(14, 33, 7);
+    width: 100%;
+    height: 162px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+/* Partners end */
+
+/* Deal start */
+.deal{
+    position: relative;
+    padding-bottom: 30px;
+}
+.deal .container{
+    padding: 0;
+}
+.deal .deal-content{
+    display: flex;
+    gap: 63px;
+}
+.deal .deal-bob{
+    width: 575px;
+    object-fit: contain;
+}
+.deal .deal-title{
+    max-width: 411px;
+    margin-left: 145px;
+    color: rgb(57, 99, 51);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+.deal-content .deal-info{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-image: url(../images/deal-info-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 160px 0 0 100px;
+}
+.deal-content .deal-text{
+    max-width: 526px;
+    font-size: 24px;
+    font-weight: 500;
+    color: #FFF;
+    line-height: 29px;
+}
+.deal-content .deal-text span{
+    color: rgb(198, 246, 86);
+}
+
+
+.marquee-wrap{
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    background: rgb(198, 246, 86);
+}
+.marquee-wrap span {
+    color: rgb(14, 33, 7);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+    text-transform: uppercase;
+    animation: marquee 5s linear infinite;
+}
+
+
+/* Deal end */
+
