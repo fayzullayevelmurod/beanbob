@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Value Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background-color: #FFF;
+}
+.wrapper{
+    overflow-x: hidden;
+}
+.container{
+    max-width: 1440px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+a, img, button, input, select, textarea{
+    transition: .3s ease all;
+}
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.buy-btn{
+    width: 299px;
+    height: 84px;
+    box-sizing: border-box;
+    border: 2px solid rgb(14, 33, 7);
+    border-radius: 100px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(14, 33, 7);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.buy-btn:hover{
+    color: rgb(57, 99, 51);
+    border: 2px solid rgb(57, 99, 51);
+    background: rgb(173, 255, 2);
+}
+.raydium-btn{
+    box-sizing: border-box;
+    border: 2px solid rgb(14, 33, 7);
+    border-radius: 100px;
+    background: rgb(255, 255, 255);
+    width: 287px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: rgb(14, 33, 7);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.raydium-btn:hover{
+    background: rgb(14, 33, 7);
+    color: rgb(255, 255, 255);
+}
+
+
+/* Header start */
+.header{
+    background: rgb(14, 33, 7);
+    padding: 30px 0 270px;
+}
+.header .header-content{
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 20px;
+}
+.header-content .header-navs,
+.header-content .header-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.header-content .header-nav-link{
+    color: rgb(198, 246, 86);
+    font-family: 'SF UI Display', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+}
+.header-content .header-nav-link:hover{
+    color: #FFF;
+}
+.header-content .header-socicial{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+/* Header end */
+
+
+/* Home start */
+.home{
+    position: relative;
+    margin-top: -420px;
+    background-image: url(../images/home-bg-r.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 936px;
+}
+.home .home-content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.home-content .home-title{
+    position: relative;
+    background-image: url(../images/home-title-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 80px 0;
+    width: 1190px;
+    margin: 60px 0px 0px 75px;
+}
+.home-content .home-bob-img{
+    position: absolute;
+    top: -22px;
+    left: 80px;
+}
+.home-content .home-title h2{
+    color: rgb(57, 99, 51);
+    font-style: italic;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+    transform: rotate(-6.00deg);
+}
+.home-content .home-title h1{
+    color: rgb(57, 99, 51);
+    font-family: 'Gilroy', sans-serif;
+    font-size: 96px;
+    font-weight: 700;
+    line-height: 116px;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    transform: rotate(-6.00deg);
+}
+.home-content .home-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+.home-info .home-info-title{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.home-info .home-info-title h4{
+    color: rgb(57, 99, 51);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+.home-info .home-info-links{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+/* Home end */
