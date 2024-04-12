@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -86,6 +90,13 @@ button {
     justify-content: space-between;
     gap: 20px;
 }
+.header .header-mob-title{
+    color: rgb(57, 99, 51);
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 28px;
+    text-transform: uppercase;
+}
 .header-content .header-navs,
 .header-content .header-nav{
     display: flex;
@@ -107,6 +118,64 @@ button {
     align-items: center;
     gap: 12px;
 }
+
+.bars{
+    display: none;
+}
+
+.header-mob{
+    position: fixed;
+    top: 60px;
+    right: 16px;
+    opacity: 0;
+    pointer-events: none;
+    border: 2px solid #0E2107;
+    padding: 44px 24px 24px;
+    border-radius: 8px;
+    z-index: 12;
+    background-color: #FFF;
+    width: 166px;
+    transition: .3s ease all;
+}
+.header-mob.active{
+    opacity: 1;
+    pointer-events: all;
+}
+.header-mob.active+.header-mob-bg{
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000b5;
+}
+.header-mob .header-mob-close{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+.header-mob .header-mob-content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.header-mob-content .header-mob-nav{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.header-mob-content .header-mob-link{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    color: #0E2107;
+}
+.header-mob-content .header-socicial{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 /* Header end */
 
 /* Header scroll */
@@ -118,7 +187,7 @@ button {
     pointer-events: none;
     z-index: 10;
     width: 100%;
-    padding: 8px 20px;
+    padding: 8px 0px;
     box-sizing: border-box;
     border: 3px solid rgb(14, 33, 7);
     border-radius: 16px;
@@ -228,15 +297,18 @@ button {
 }
 .home-content .home-title h2{
     color: rgb(57, 99, 51);
+    font-weight: 400;
     font-style: italic;
     font-size: 36px;
     line-height: 36px;
+    text-align: center;
     text-transform: uppercase;
     transform: rotate(-6.00deg);
 }
 .home-content .home-title h1{
     color: rgb(57, 99, 51);
     font-family: 'Gilroy', sans-serif;
+    font-style: italic;
     font-size: 96px;
     font-weight: 700;
     line-height: 116px;
@@ -299,6 +371,7 @@ button {
     gap: 40px;
 }
 .partners-content .partners-title{
+    font-style: italic;
     color: rgb(57, 99, 51);
     font-size: 48px;
     font-weight: 500;
@@ -315,11 +388,28 @@ button {
     border-radius: 30px;
     background: rgb(14, 33, 7);
     width: 100%;
+    min-width: 173px;
     height: 162px;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 30px;
+}
+.partners-content .partners-logo-link img{
+    width: 100%;
+}
+.partners-content .partners-logo-link:nth-child(1) img,
+.partners-content .partners-logo-link:nth-child(4) img{
+    height: 102px;
+}
+.partners-content .partners-logo-link .partners-logo-mob{
+    display: none;
+}
+.partners-content .partners-logo-link:nth-child(2) .partners-logo-mob{
+    width: 64px;
+}
+.partners-content .partners-logo-link:nth-child(3) .partners-logo-mob{
+    width: 105px;
 }
 /* Partners end */
 
@@ -339,7 +429,11 @@ button {
     width: 575px;
     object-fit: contain;
 }
+.deal .deal-bob-mob{
+    display: none;
+}
 .deal .deal-title{
+    font-style: italic;
     max-width: 411px;
     margin-left: 145px;
     color: rgb(57, 99, 51);
@@ -406,6 +500,7 @@ button {
     gap: 40px;
 }
 .token-info .token-title{
+    font-style: italic;
     color: rgb(14, 33, 7);
     font-size: 48px;
     font-weight: 500;
@@ -435,9 +530,10 @@ button {
 }
 .token-block .token-block-title{
     position: relative;
-    margin-left: -100px;
+    margin-left: -85px;
 }
 .token-block .token-block-title h2{
+    font-style: italic;
     width: 340px;
     color: rgb(14, 33, 7);
     font-size: 48px;
@@ -549,6 +645,7 @@ button {
     flex-direction: column;
 }
 .roadmap-content .roadmap-title{
+    font-style: italic;
     color: rgb(57, 99, 51);
     font-size: 48px;
     font-weight: 500;
@@ -647,6 +744,7 @@ button {
 }
 .great-content .great-title{
     color: rgb(57, 99, 51);
+    font-style: italic;
     font-size: 48px;
     font-weight: 500;
     line-height: 48px;
@@ -669,6 +767,7 @@ button {
     padding-bottom: 30px;
 }
 .beanbob .beanbob-title{
+    font-style: italic;
     color: rgb(57, 99, 51);
     font-size: 48px;
     font-weight: 500;
@@ -676,6 +775,7 @@ button {
     text-transform: uppercase;
 }
 .beanbob .beanbob-items{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -705,6 +805,7 @@ button {
     background-color: transparent;
 }
 .beanbob .beanbob-item .beanbob-item-title{
+    font-style: italic;
     color: rgb(57, 99, 51);
     font-size: 48px;
     font-weight: 500;
@@ -732,6 +833,7 @@ button {
     gap: 40px;
 }
 .faq-content .faq-title{
+    font-style: italic;
     color: rgb(255, 255, 255);
     font-size: 48px;
     font-weight: 500;
@@ -806,6 +908,9 @@ button {
     top: -82px;
     left: 172px;
 }
+.follow-content .follow-img-mob{
+    display: none;
+}
 .follow-content .follow-info{
     display: flex;
     flex-direction: column;
@@ -816,6 +921,7 @@ button {
     margin: 0 auto;
 }
 .follow-content .follow-title{
+    font-style: italic;
     color: rgb(14, 33, 7);
     font-size: 48px;
     font-weight: 500;
@@ -853,3 +959,589 @@ button {
     line-height: 29px;
 }
 /* Copyright end */
+
+
+
+/* @MEDIA START */
+
+@media only screen and (max-width: 1300px){
+    .home-content .home-title{
+        margin-left: 40px;
+        width: 900px;
+        padding: 65px 0;
+        transform: rotate(-5.46deg);
+    }
+    .home-content .home-title h1 {
+        font-size: 75px;
+        line-height: 85px;
+    }
+    .home-content .home-title h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }    
+
+    .deal .deal-content {
+        gap: 30px;
+    }
+    .deal .deal-bob {
+        width: 500px;
+    }
+    .deal-content .deal-info {
+        gap: 20px;
+        padding: 130px 30px 30px 84px;
+    }
+    .deal-content .deal-text {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .token-block .token-items{
+        width: 442px;
+    }
+    .token-block .token-item {
+        width: 215px;
+        padding: 30px 15px;
+    }
+    .token-block .token-item:nth-child(3) {
+        width: 235px;
+    }
+    .token-block .token-item:nth-child(4) {
+        width: 195px;
+    }
+    .token-info .token-img {
+        margin-left: -60px;
+        width: 510px;
+    }
+    .token .token-content{
+        padding: 60px 40px;
+        gap: 20px;
+    }
+
+
+    .roadmap .roadmap-content {
+        gap: 12px;
+        padding: 40px 40px;
+    }
+    .roadmap-content .roadmap-img {
+        object-fit: contain;
+        height: 425px;
+    }
+    .roadmap-content .roadmap-img:nth-child(2) {
+        margin-left: -65px;
+    }
+    .roadmap-content .roadmap-tabs {
+        width: 52%;
+    }
+    .roadmap-content .roadmap-tab{
+        width: 100%;
+    }
+
+
+    .follow-content .follow-img {
+        left: 80px;
+    }
+}
+
+
+@media only screen and (max-width: 1100px){
+
+    .token .token-content{
+        flex-direction: column;
+        gap: 60px;
+    }
+    .token-block .token-block-top{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        gap: 42px;
+    }
+    .token-block .token-block-title{
+        margin: 0 auto;
+    }
+    .token-info .token-img{
+        display: none;
+    }
+    .beanbob .beanbob-item{
+        height: 320px;
+    }
+
+    .follow-content .follow-img {
+        left: 0;
+    }
+
+
+    .copyright{
+        padding-top: 0;
+    }
+}
+
+
+@media only screen and (max-width: 991px){
+    .container{
+        padding: 0px 16px;
+    }
+    .home-content .home-bob-img {
+        top: -40px;
+    }
+    .home-content .home-title h1 {
+        font-size: 45px;
+        line-height: 60px;
+    }
+    .home-content .home-title h2 {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .home-content .home-title {
+        width: 700px;
+        padding: 43px 0;
+        transform: rotate(-5.46deg);
+        margin-top: 100px;
+    }
+    .home-content .home-info{
+        flex-direction: column;
+        gap: 27px;
+    }
+    .home-info .home-info-title{
+        gap: 0;
+        width: 145px;
+    }
+    .home-info .home-info-title img{
+        transform: rotate(90deg);
+        height: 34px;
+        margin-left: -30px;
+    }
+
+    .partners-content .partners-title{
+        padding-left: 0;
+    }
+
+    .deal .container{
+        padding: 0px 16px;
+    }
+    .deal .deal-title{
+        max-width: 100%;
+        margin: 0;
+    }
+    .deal .deal-content{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .deal .deal-bob{
+        display: none;
+    }  
+    .deal .deal-bob-mob{
+        display: flex;
+        width: 213px;
+    }  
+    .deal-content .deal-info{
+        background-image: none;
+        padding: 0px 0px 40px 0px;
+        gap: 24px;
+    }
+    .deal-content .deal-text{
+        color: #0E2107;
+        max-width: 100%;
+    }
+    .deal-content .deal-text span{
+        color: #396333;
+    }
+
+
+    .roadmap .roadmap-content{
+        padding: 0;
+        border: none;
+    }
+    .roadmap-content .roadmap-info{
+        width: 100%;
+        gap: 20px;
+    }
+    .roadmap-content .roadmap-images{
+        border: 3px solid #C6F656;
+        border-radius: 16px;
+        width: 100%;
+    }
+    .roadmap .roadmap-content{
+        flex-direction: column;
+        gap: 12px;
+    }
+    .roadmap-content .roadmap-tabs{
+        width: 100%;
+    }
+    .roadmap-content .roadmap-img {
+        height: 230px;
+    }
+    .roadmap-content .roadmap-img:nth-child(1),
+    .roadmap-content .roadmap-img:nth-child(2) {
+        margin-left: -25px;
+    }
+}
+
+
+@media only screen and (max-width: 776px){
+    .play-music{
+        bottom: 100px;
+        left: 16px;
+    }
+    .header-scroll .header__scroll-navs{
+        gap: 20px;
+    }
+    .header-scroll .header__scroll-logo img,
+    .header-scroll .header__scroll-link img{
+        width: 35px;
+    }
+    .header-scroll .header__scroll-nav {
+        font-size: 14px;
+        line-height: 15px;
+    }
+
+
+
+    .raydium-btn{
+        height: 60px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .buy-btn{
+        height: 54px;
+        font-size: 18px;
+        line-height: 18px;
+    }
+
+    .home-content .home-title {
+        margin-left: -30px;
+    }
+    .home-info .home-info-links {
+        gap: 8px;
+        width: 100%;
+        flex-direction: column;
+    }
+    .home-info .home-info-link{
+        width: 100%;
+    }
+    .home .home-bobs {
+        margin-top: 52px;
+    }
+
+    .partners .partners-content{
+        gap: 24px;
+    }
+    .partners-content .partners-logo{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .partners-content .partners-logo-link .partners-logo-img{
+        display: none;
+    }
+    .partners-content .partners-logo-link:nth-child(1) img{
+        width: 60px;
+    }
+    .partners-content .partners-logo-link:nth-child(4) img{
+        width: 87px;
+    }
+    .partners-content .partners-logo-link .partners-logo-mob{
+        display: flex;
+    }
+
+    
+    .token{
+        padding: 40px 0;
+    }
+    .token .token-content{
+        padding: 0;
+        border-radius: 0;
+        background-color: transparent;
+    }
+    .token-content .token-info{
+        gap: 20px;
+    }
+    .token-block .token-items{
+        width: 100%;
+    }
+    .token-block .token-item{
+        width: 48%;
+    }
+    .token-block .token-item:nth-child(3){
+        width: 50%;
+    }
+    .token-block .token-item:nth-child(4){
+        width: 47%;
+    }
+    .token-info .token-title,
+    .token-info .token-text,
+    .token-address .token-address-inp label{
+        color: #FFF;
+    }
+    .token-info .token-text{
+        max-width: 100%;
+    }
+    .token-block .token-block-title h2{
+        color: #C6F656;
+        text-shadow: #FFF -2.3px 3px;
+    }
+    .token-address .token-address-inp{
+        gap: 12px;
+    }
+    .token-block .token-address{
+        gap: 20px;
+    }
+    .token-content .token-block {
+        gap: 54px;
+    }
+    .token-address .token-address-inp input{
+        border-width: 2px;
+    }
+    .token-address .token-address-btn{
+        border-color: #FFF;
+    }
+    .token-block .token-item:hover {
+        box-shadow: -11px 11px 0px #FFF;
+    }
+
+    .beanbob .beanbob-item {
+        height: 250px;
+    }
+    .beanbob .beanbob-item .beanbob-item-title{
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    .faq .faq-content {
+        padding: 26px;
+        gap: 20px;
+        border-radius: 16px;
+    }
+
+    .follow {
+        padding: 18px 0px 80px;
+    }
+    .follow-content .follow-img{
+        display: none;
+    }
+    .follow-content .follow-img-mob{
+        display: flex;
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translate(-140%);
+    }
+    
+    
+}
+
+
+@media only screen and (max-width: 576px){
+    .header {
+        padding-top: 8px;
+    }
+    .header .header-content{
+        align-items: center;
+    }
+    .header-content .header-nav,
+    .header-content .header-socicial{
+        display: none;
+    }
+    .bars{
+        display: flex;
+    }
+    .header-scroll .header__scroll-navs,
+    .header-scroll .header__scroll-socicial{
+        display: none;
+    }
+
+    
+    .marquee-wrap{
+        gap: 44px;
+        height: 40px;
+        padding: 0;
+    }
+
+
+    .home{
+        margin-top: -230px;
+        background-position: 65%;
+        padding: 50px 0 0;
+        height: auto;
+    }
+    .home-content .home-title {
+        background-image: url(../images/home-mob-title-bg.png);
+        margin-left: 0;
+        margin: 0 auto;
+        width: 400px;
+        background-size: 100% 100%;
+        padding: 50px 0;
+    } 
+    .home-content .home-title h1{
+        font-size: 32px;
+        line-height: 38px;
+    }
+    .home-content .home-title h2{
+        font-size: 20px;
+        line-height: 20px;    
+    }
+    .home-content .home-bob-img {
+        top: -36px;
+        left: 30px;
+        width: 158px;
+    }
+
+    .partners {
+        padding: 68px 0 40px;
+    }
+    .partners-content .partners-title,
+    .deal .deal-title,
+    .token-info .token-title,
+    .token-block .token-block-title h2,
+    .roadmap-content .roadmap-title,
+    .great-content .great-title,
+    .marquee-wrap span,
+    .beanbob .beanbob-title,
+    .faq-content .faq-title,
+    .follow-content .follow-title{
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .partners-content .partners-logo-link{
+        height: 173px;
+    }
+    .deal-content .deal-text,
+    .token-address .token-address-inp label,
+    .token-address .token-address-inp input,
+    .roadmap-tab .roadmap-tab-text,
+    .faq-item .accordion-content,
+    .follow-content .follow-text,
+    .copyright .copyright-info span {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    
+    .token-info .token-text,
+    .token-block .token-item,
+    .token-address .token-address-btn,
+    .faq-item .accordion-header h3{
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .token-block .token-item{
+        padding: 16px 10px;
+    }
+    .token-block .token-item:nth-child(4) {
+        width: 46%;
+    }
+    .token-block .token-block-title h2{
+        width: 170px;
+    }
+    .token-address .token-address-inp input{
+        border-radius: 8px;
+        height: 48px;
+    }
+    .token-address .token-address-btn{
+        width: 100%;
+        height: 54px;
+        border: none;
+    }
+    .token-block .token-item:hover {
+        box-shadow: -5px 5px 0px #FFF;
+    }
+
+    .roadmap{
+        padding-bottom: 0;
+    }
+    .roadmap-content .roadmap-img {
+        height: 200px;
+    }
+    .roadmap-content .roadmap-tab{
+        gap: 16px;
+        padding: 8px 16px;
+    }
+    .roadmap-tab .roadmap-tab-title h3{
+        font-size: 28px;
+        line-height: 33px;
+    }
+    .roadmap-tab .roadmap-tab-title{
+        gap: 8px;
+    }
+    .roadmap-tab .roadmap-tab-title svg{
+        width: 34px;
+        height: 34px;
+    }
+
+    .great .great-content {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .great-content .great-links{
+        width: 100%;
+        gap: 12px;
+    }
+    .great-content .great-links .great-link{
+        width: 100%;
+    }
+
+    .beanbob{
+        padding: 0 0 40px 0;
+    }
+    .beanbob .beanbob-items{
+        height: 382px;
+        align-items: start;
+        justify-content: start;
+        margin-top: 20px;
+    }
+    .beanbob .beanbob-item{
+        width: 62%;
+        height: 242px;
+        padding: 25px 23px;
+        align-items: start;
+        justify-content: start;
+        border: none;
+    }
+    .beanbob .beanbob-item:nth-child(2){
+        position: absolute;
+        top: 70px;
+        left: 68px;
+    }
+    .beanbob .beanbob-item:nth-child(3){
+        position: absolute;
+        top: 140px;
+        left: 136px;
+        border-width: 3px;
+        background-color: #FFF;
+    }
+    .beanbob .beanbob-item .beanbob-item-title{
+        font-size: 24px;
+        line-height: 24px;
+    }
+
+    .faq-content .faq-item{
+        padding: 12px 16px 12px 16px;
+    }
+    .faq-item .accordion-header h3{
+        padding-right: 30px;
+    }
+    .faq-item .accordion-header.active{
+        padding-bottom: 28px;
+    }
+
+    .follow-content .follow-info{
+        gap: 20px;
+    }
+    .follow-socicial img{
+        width: 54px;
+    }
+
+    .copyright{
+        padding-bottom: 20px;
+    }
+    .copyright .copyright-info{
+        gap: 18px;
+    }
+}
+
+
+@media only screen and (max-width: 400px){
+    .home-content .home-title{
+        margin-left: -30px;
+    }
+}

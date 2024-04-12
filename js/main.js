@@ -10,6 +10,32 @@ window.addEventListener('scroll', function() {
     }
 });
 
+
+// Header menu
+let openMenu = document.querySelectorAll('.bars');
+let closeMenu = document.querySelector('.header-mob-close');
+let menu = document.querySelector('.header-mob');
+let menuLinks = document.querySelectorAll('.header-mob-link');
+let menuBg = document.querySelector('.header-mob-bg');
+
+openMenu.forEach(open => {
+    open.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    })
+})
+closeMenu.addEventListener('click', function() {
+    menu.classList.remove('active');
+})
+menuLinks.forEach(menuLink => {
+    menuLink.addEventListener('click', function() {
+        menu.classList.remove('active');
+    });
+})
+menuBg.addEventListener('click', function() {
+    menu.classList.remove('active');
+})
+
+
 // Play music
 let audio = document.getElementById("myAudio");
 let playButton = document.querySelector(".play-music");
@@ -40,6 +66,7 @@ items.forEach((item) => {
         accordionContent.style.maxHeight = accordionContent.style.maxHeight ? null : accordionContent.scrollHeight + 'px';
     });
 });
+
 
 // Roadmap tab
 let tabs = document.querySelectorAll(".roadmap-tab");
