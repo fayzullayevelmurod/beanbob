@@ -31,13 +31,34 @@ button {
     cursor: pointer;
 }
 
+.raydium-btn{
+    box-sizing: border-box;
+    border: 2px solid rgb(198, 246, 86);
+    border-radius: 100px;
+    width: 287px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: rgb(198, 246, 86);
+    color: rgb(14, 33, 7);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.raydium-btn:hover{
+    border: 2px solid rgb(57, 99, 51);
+    background: rgb(173, 255, 2);
+    color: rgb(57, 99, 51);
+}
 .buy-btn{
     width: 299px;
     height: 84px;
     box-sizing: border-box;
     border: 2px solid rgb(14, 33, 7);
-    border-radius: 100px;
     background: rgb(255, 255, 255);
+    border-radius: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,29 +68,8 @@ button {
     line-height: 24px;
 }
 .buy-btn:hover{
-    color: rgb(57, 99, 51);
-    border: 2px solid rgb(57, 99, 51);
-    background: rgb(173, 255, 2);
-}
-.raydium-btn{
-    box-sizing: border-box;
-    border: 2px solid rgb(14, 33, 7);
-    border-radius: 100px;
-    background: rgb(255, 255, 255);
-    width: 287px;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    color: rgb(14, 33, 7);
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 24px;
-}
-.raydium-btn:hover{
-    background: rgb(14, 33, 7);
-    color: rgb(255, 255, 255);
+    color: #FFF;
+    background: rgb(14, 33, 7);;
 }
 
 
@@ -109,9 +109,70 @@ button {
 }
 /* Header end */
 
+/* Header scroll */
+.header-scroll{
+    position: fixed;
+    top: -10px;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    width: 100%;
+    padding: 8px 20px;
+    box-sizing: border-box;
+    border: 3px solid rgb(14, 33, 7);
+    border-radius: 16px;
+    background: rgb(255, 255, 255);
+    transition: .3s ease all;
+}
+.header-scroll.active{
+    top: 0;
+    opacity: 1;
+    pointer-events: all;
+}
+.header-scroll .header__scroll-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-scroll .header__scroll-navs{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.header-scroll .header__scroll-nav{
+    position: relative;
+    color: rgb(14, 33, 7);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    overflow: hidden;
+}
+.header-scroll .header__scroll-nav::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -150%;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(14, 33, 7);
+    transition: .3s ease all;
+}
+.header-scroll .header__scroll-nav:hover::after{
+    left: 0;
+}
+.header-scroll .header__scroll-socicial{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+/* Header scroll */
+
+
 /* Play music */
 .play-music{
     position: fixed;
+    z-index: 10;
     bottom: 50px;
     left: 50px;
     display: flex;
@@ -139,7 +200,7 @@ button {
     background-image: url(../images/home-bg-r.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 936px;
+    height: 760px;
 }
 .home .home-content{
     position: relative;
@@ -326,8 +387,281 @@ button {
 }
 /* Deal end */
 
+/* Token start */
+.token{
+    padding: 30px 0;
+    background: rgb(14, 33, 7);
+}
+.token .token-content{
+    display: flex;
+    align-items: start;
+    gap: 62px;
+    padding: 60px 60px 60px 95px;
+    border-radius: 30px;
+    background: rgb(255, 255, 255);
+}
+.token-content .token-info{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.token-info .token-title{
+    color: rgb(14, 33, 7);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+.token-info .token-text{
+    max-width: 380px;
+    color: rgb(14, 33, 7);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.token-info .token-img{
+    margin-left: -103px;
+}
+.token-content .token-block{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+.token-block .token-block-top{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.token-block .token-block-title{
+    position: relative;
+    margin-left: -100px;
+}
+.token-block .token-block-title h2{
+    width: 340px;
+    color: rgb(14, 33, 7);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 48px;
+    text-transform: uppercase;
+    transform: rotate(-8.00deg);
+    text-shadow: #c6f656 -2.3px 3px;
+}
+.token-block .token-items{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 502px;
+}
+.token-block .token-item{
+    width: 245px;
+    padding: 30px;
+    text-align: center;
+    color: rgb(14, 33, 7);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+    border-radius: 16px;
+    background: rgb(198, 246, 86);
+    cursor: pointer;
+}
+.token-block .token-item:hover{
+    transform: translate(10px, 0px);
+    box-shadow: -11px 11px 0px rgb(14, 33, 7);
+}
+.token-block .token-item:nth-child(3){
+    width: 266px;
+}
+.token-block .token-item:nth-child(4){
+    width: 223px;
+}
+.token-block .token-address{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.token-address .token-address-inp{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.token-address .token-address-inp label{
+    color: rgb(14, 33, 7);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+}
+.token-address .token-address-inp input{
+    width: 100%;
+    height: 78px;
+    padding: 20px;
+    color: rgb(14, 33, 7);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    box-sizing: border-box;
+    border: 5px solid rgba(198, 246, 86, 1);
+    border-radius: 8px;
+    background: rgb(255, 255, 255);
+    outline: none;
+}
+.token-address .token-address-btn{
+    width: 206px;
+    height: 56px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 2px solid rgb(14, 33, 7);
+    border-radius: 100px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(14, 33, 7);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+}
+.token-address .token-address-btn:hover{
+    color: #FFF;
+    background-color: rgb(14, 33, 7);
+}
+/* Token end */
+
+/* Roadmap start */
+.roadmap{
+    padding: 30px 0;
+}
+.roadmap .roadmap-content{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 40px;
+    box-sizing: border-box;
+    border: 10px solid rgb(198, 246, 86);
+    border-radius: 30px;
+    background: rgb(255, 255, 255);
+    padding: 60px 95px 10px;
+}
+.roadmap-content .roadmap-info{
+    display: flex;
+    flex-direction: column;
+}
+.roadmap-content .roadmap-title{
+    color: rgb(57, 99, 51);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+.roadmap-content .roadmap-img{
+    display: none;
+    width: 100%;
+    height: 480px;
+}
+.roadmap-content .roadmap-img:nth-child(1){
+    margin-left: -65px;
+}
+.roadmap-content .roadmap-img.active{
+    display: block;
+}
+
+.roadmap-content .roadmap-tabs{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.roadmap-content .roadmap-tab{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 10px 20px;
+    border-radius: 16px;
+    background: rgb(14, 33, 7);
+    width: 567px;
+}
+.roadmap-content .roadmap-tab.active{
+    background-color: #C6F656;
+}
+.roadmap-tab.active svg path{
+    stroke: #0E2107;
+}
+.roadmap-tab .roadmap-tab-title{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.roadmap-tab .roadmap-tab-title h3{
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 43px;
+    text-transform: uppercase;
+}
+.roadmap-tab .roadmap-tab-text{
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    text-align: start;
+}
+.roadmap-tab.active .roadmap-tab-title h3,
+.roadmap-tab.active .roadmap-tab-text{
+    color: rgb(0, 0, 0);
+}
+
+/* Roadmap end */
 
 
+
+/* Great start */
+.great{
+    padding: 235px 0px 190px;
+    position: relative;
+}
+.great-marquee1{
+    position: absolute;
+    top: 250px;
+    left: 0;
+    z-index: 2;
+    margin-left: -50px;
+    transform: rotate(15.00deg);
+}
+.great-marquee2{
+    position: absolute;
+    top: 33px;
+    left: -10px;
+    transform: rotate(-4.00deg);
+}
+.great-marquee3{
+    position: absolute;
+    bottom: 105px;
+    left: -10px;
+    transform: rotate(-4.00deg);
+}
+.great .great-content{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.great-content .great-title{
+    color: rgb(57, 99, 51);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 48px;
+    text-transform: uppercase;
+    max-width: 155px;
+}
+.great-content .great-links{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.great-content .great-links .great-link{
+    width: 299px;
+}
+/* Great end */
 
 
 /* Beanbob start */
@@ -383,3 +717,139 @@ button {
     color: rgb(14, 33, 7);
 }
 /* Beanbob end */
+
+
+/* Faq start */
+.faq{
+    padding-bottom: 124px;
+}
+.faq .faq-content{
+    padding: 50px 60px;
+    border-radius: 30px;
+    background: rgb(14, 33, 7);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.faq-content .faq-title{
+    color: rgb(255, 255, 255);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+.faq-content .faq-accordion{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.faq-content .faq-item{
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+}
+.faq-item .accordion-header{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+.faq-item .accordion-header.active{
+    padding-bottom: 40px;
+}
+.faq-item .accordion-header h3{
+    color: rgb(14, 33, 7);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+}
+.faq-item .accordion-icon img{
+    position: absolute;
+    right: 0;
+    top: 3px;
+    transition: .3s ease all;
+}
+.faq-item .accordion-icon .x-close{
+    opacity: 0;
+}
+.faq-item .accordion-icon.active .x-close{
+    opacity: 1;
+}
+.faq-item .accordion-icon.active .plus{
+    opacity: 0;
+}
+.faq-item .accordion-content{
+    color: rgb(14, 33, 7);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+    padding-right: 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+/* Faq end */
+
+/* Follow start */
+.follow{
+    padding: 80px 0px 120px;
+}
+.follow .follow-content{
+    position: relative;
+}
+.follow-content .follow-img{
+    position: absolute;
+    top: -82px;
+    left: 172px;
+}
+.follow-content .follow-info{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    max-width: 578px;
+    margin: 0 auto;
+}
+.follow-content .follow-title{
+    color: rgb(14, 33, 7);
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+.follow-content .follow-text{
+    color: rgb(14, 33, 7);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    text-align: center;
+}
+.follow-content .follow-socicial{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+/* Follow end */
+
+/* Copyright start */
+.copyright{
+    padding: 137px 0px 60px;
+}
+.copyright .copyright-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+.copyright .copyright-info span{
+    color: rgb(14, 33, 7);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+}
+/* Copyright end */
