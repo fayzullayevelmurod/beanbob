@@ -1181,7 +1181,7 @@ button {
 
 @media only screen and (max-width: 776px){
     .play-music{
-        bottom: 100px;
+        bottom: 90px;
         left: 16px;
     }
     .header-scroll .header__scroll-navs{
@@ -1368,7 +1368,7 @@ button {
         background-image: url(../images/home-mob-title-bg.png);
         margin-left: 0;
         margin: 0 auto;
-        width: 400px;
+        width: 415px;
         background-size: 100% 100%;
         padding: 50px 0;
     } 
