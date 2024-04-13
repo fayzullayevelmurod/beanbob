@@ -343,25 +343,20 @@ button {
     gap: 16px;
 }
 
-.home .home-bobs{
+.home .home-bobs,
+.home .home-bob{
     display: flex;
     align-items: center;
     margin-top: 60px;
 }
+.home .home-bobs .home-bob{
+    animation: marquee 20s linear infinite;
+}
 .home .home-bobs .home-bobs-img{
     object-fit: contain;
-    animation: marquee 5s linear infinite;
+    animation: swap 20s linear infinite;
 }
 
-@keyframes marquee {
-    from {
-      transform: translateX(0);
-    }
-  
-    to {
-      transform: translateX(-100%);
-    }
-  }
 /* Home end */
 
 /* Partners start */
@@ -474,13 +469,38 @@ button {
     gap: 80px;
     background: rgb(198, 246, 86);
 }
+.marquee-wrap .marque-item1,
+.marquee-wrap .marque-item2{
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    animation: marquee 20s linear infinite;
+
+}
 .marquee-wrap span {
     color: rgb(14, 33, 7);
     font-size: 28px;
     font-weight: 500;
     line-height: 28px;
     text-transform: uppercase;
-    animation: marquee 3s linear infinite;
+    animation: swap 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes swap {
+  0%, 50% {
+    left: 0%;
+  }
+  50.01%, 100% {
+    left: 100%;
+  }
 }
 /* Deal end */
 
@@ -722,7 +742,8 @@ button {
 }
 .great-marquee1{
     position: absolute;
-    top: 250px;
+    top: 230px;
+    width: 120%;
     left: 0;
     z-index: 2;
     margin-left: -50px;
@@ -730,13 +751,13 @@ button {
 }
 .great-marquee2{
     position: absolute;
-    top: 33px;
+    top: -15px;
     left: -10px;
     transform: rotate(-4.00deg);
 }
 .great-marquee3{
     position: absolute;
-    bottom: 105px;
+    bottom: 150px;
     left: -10px;
     transform: rotate(-4.00deg);
 }
@@ -767,6 +788,7 @@ button {
 
 /* Beanbob start */
 .beanbob{
+    padding-top: 70px;
     padding-bottom: 30px;
 }
 .beanbob .beanbob-title{
@@ -1072,6 +1094,12 @@ button {
         left: 0;
     }
 
+    .great-marquee2{
+        top: -60px;
+    }
+    .great-marquee1{
+        top: 130px;
+    }
 
     .copyright{
         padding-top: 0;
@@ -1359,9 +1387,6 @@ button {
         height: 40px;
         padding: 0;
     }
-    .great-marquee1 {
-        top: 230px;
-    }
 
 
     .home{
@@ -1474,11 +1499,20 @@ button {
         height: 34px;
     }
 
+    .great {
+        padding: 195px 0px 140px;
+        position: relative;
+    }
+    .great-marquee1 {
+        top: 86px;
+    }
+    .great-marquee2 {
+        top: -50px;
+    }
     .great .great-content {
         flex-direction: column;
         gap: 16px;
     }
-
     .great-content .great-links{
         width: 100%;
         gap: 12px;
@@ -1488,7 +1522,7 @@ button {
     }
 
     .beanbob{
-        padding: 0 0 40px 0;
+        padding: 50px 0 40px 0;
     }
     .beanbob .beanbob-items{
         height: 382px;

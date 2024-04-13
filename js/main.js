@@ -36,7 +36,7 @@ menuBg.addEventListener('click', function () {
 })
 
 
-// Play music
+// // Play music
 let audio = document.getElementById("myAudio");
 let playButton = document.querySelector(".play-music");
 
@@ -85,6 +85,4 @@ tabs.forEach((tab, index) => {
         images[tabIndex].classList.add("active");
     });
 });
-
-
 
