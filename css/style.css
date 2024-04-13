@@ -485,22 +485,47 @@ button {
     text-transform: uppercase;
     animation: swap 20s linear infinite;
 }
-
+.great-marquee1 {
+    justify-content: end;
+}
+.great-marquee1 .marque-item1,
+.great-marquee1 .marque-item2{
+    animation: marquee2 20s linear infinite;
+}
+.great-marquee1 span{
+    animation: swap2 20s linear infinite;
+}
 @keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes marquee2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }
 @keyframes swap {
-  0%, 50% {
-    left: 0%;
-  }
-  50.01%, 100% {
-    left: 100%;
-  }
+    0%, 50% {
+        left: 0%;
+    }
+    50.01%, 100% {
+        left: 100%;
+    }
+}
+@keyframes swap2 {
+    0%, 50% {
+       left: 0%;
+    }
+    50.01%, 100% {
+       left: -100%;
+    }
 }
 /* Deal end */
 
