@@ -1382,7 +1382,9 @@ button {
     }
 
     
-    .marquee-wrap{
+    .marquee-wrap,
+    .marquee-wrap .marque-item1,
+    .marquee-wrap .marque-item2{
         gap: 44px;
         height: 40px;
         padding: 0;
@@ -1507,7 +1509,10 @@ button {
         top: 86px;
     }
     .great-marquee2 {
-        top: -50px;
+        top: -30px;
+    }
+    .great-marquee3{
+        bottom: 115px;
     }
     .great .great-content {
         flex-direction: column;
