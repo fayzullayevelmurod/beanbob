@@ -109,6 +109,7 @@ button {
     font-size: 18px;
     font-weight: 700;
     line-height: 21px;
+    text-transform: uppercase;
 }
 .header-content .header-nav-link:hover{
     color: #FFF;
@@ -134,7 +135,6 @@ button {
     border-radius: 8px;
     z-index: 12;
     background-color: #FFF;
-    width: 166px;
     transition: .3s ease all;
 }
 .header-mob.active{
@@ -170,6 +170,8 @@ button {
     font-weight: 700;
     line-height: 21px;
     color: #0E2107;
+    text-transform: uppercase;
+    white-space: nowrap;
 }
 .header-mob-content .header-socicial{
     display: flex;
@@ -348,17 +350,18 @@ button {
 }
 .home .home-bobs .home-bobs-img{
     object-fit: contain;
-    animation: marquee 10s linear infinite;
+    animation: marquee 5s linear infinite;
 }
 
 @keyframes marquee {
-    0% {
-        transform: translate(0, 0);
+    from {
+      transform: translateX(0);
     }
-    100% {
-        transform: translate(-100%, 0);
+  
+    to {
+      transform: translateX(-100%);
     }
-}
+  }
 /* Home end */
 
 /* Partners start */
@@ -477,7 +480,7 @@ button {
     font-weight: 500;
     line-height: 28px;
     text-transform: uppercase;
-    animation: marquee 5s linear infinite;
+    animation: marquee 3s linear infinite;
 }
 /* Deal end */
 
@@ -553,10 +556,10 @@ button {
 }
 .token-block .token-item{
     width: 245px;
-    padding: 30px;
+    padding: 30px 20px;
     text-align: center;
     color: rgb(14, 33, 7);
-    font-size: 24px;
+    font-size: 24px; 
     font-weight: 500;
     line-height: 24px;
     border-radius: 16px;
@@ -866,7 +869,7 @@ button {
 .faq-item .accordion-header h3{
     color: rgb(14, 33, 7);
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 800;
     line-height: 29px;
 }
 .faq-item .accordion-icon img{
@@ -1356,6 +1359,9 @@ button {
         height: 40px;
         padding: 0;
     }
+    .great-marquee1 {
+        top: 230px;
+    }
 
 
     .home{
@@ -1430,6 +1436,7 @@ button {
         width: 46%;
     }
     .token-block .token-block-title h2{
+        text-shadow: #FFF -1px 2px;
         width: 170px;
     }
     .token-address .token-address-inp input{

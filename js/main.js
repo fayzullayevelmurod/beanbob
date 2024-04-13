@@ -1,5 +1,5 @@
 // Header scroll active
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     let header = document.querySelector('.header-scroll');
     let scrollPosition = window.scrollY;
 
@@ -19,19 +19,19 @@ let menuLinks = document.querySelectorAll('.header-mob-link');
 let menuBg = document.querySelector('.header-mob-bg');
 
 openMenu.forEach(open => {
-    open.addEventListener('click', function() {
+    open.addEventListener('click', function () {
         menu.classList.toggle('active');
     })
 })
-closeMenu.addEventListener('click', function() {
+closeMenu.addEventListener('click', function () {
     menu.classList.remove('active');
 })
 menuLinks.forEach(menuLink => {
-    menuLink.addEventListener('click', function() {
+    menuLink.addEventListener('click', function () {
         menu.classList.remove('active');
     });
 })
-menuBg.addEventListener('click', function() {
+menuBg.addEventListener('click', function () {
     menu.classList.remove('active');
 })
 
@@ -85,3 +85,6 @@ tabs.forEach((tab, index) => {
         images[tabIndex].classList.add("active");
     });
 });
+
+
+
