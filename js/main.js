@@ -94,13 +94,13 @@ const marqueItems = document.querySelectorAll('.marque-item1');
 
 marqueItems.forEach(marqueItem => {
     gsap.to(marqueItem, {
-        x: '-100%', // Elementni chapga olib yuborish uchun
-        duration: 15, // Animatsiya davomiyligi
-        repeat: -1, // To'xtatmasdan takrorlanishi
-        ease: 'linear', // Animatsiya tizimi
-        repeatDelay: 0, // Keyingi takrorlashni kechiktirish (default: 0)
+        x: '-100%',
+        duration: 15,
+        repeat: -1,
+        ease: 'linear',
+        repeatDelay: 0,
         onStart: function() {
-            gsap.set(marqueItem, { x: 0 }); // Animatsiya boshlanishida elementlarni boshiga qaytarish
+            gsap.set(marqueItem, { x: 0 });
         }
     });
 });
@@ -110,13 +110,13 @@ const marqueItems2 = document.querySelectorAll('.marque-item2');
 
 marqueItems2.forEach(marqueItem => {
     gsap.to(marqueItem, {
-        x: '100%', // Elementni chapga olib yuborish uchun
-        duration: 15, // Animatsiya davomiyligi
-        repeat: -1, // To'xtatmasdan takrorlanishi
-        ease: 'linear', // Animatsiya tizimi
-        repeatDelay: 0, // Keyingi takrorlashni kechiktirish (default: 0)
+        x: '100%',
+        duration: 15,
+        repeat: -1,
+        ease: 'linear',
+        repeatDelay: 0,
         onStart: function() {
-            gsap.set(marqueItem, { x: 0 }); // Animatsiya boshlanishida elementlarni boshiga qaytarish
+            gsap.set(marqueItem, { x: 0 });
         }
     });
 });

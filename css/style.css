@@ -474,8 +474,6 @@ button {
     display: flex;
     align-items: center;
     gap: 80px;
-    /* animation: marquee 10s linear infinite;
-    will-change: transform; */
 }
 .marquee-wrap span {
     color: rgb(14, 33, 7);
@@ -484,12 +482,6 @@ button {
     line-height: 28px;
     text-transform: uppercase;
 }
-
-/* @keyframes marquee {
-  to {
-    transform: translateX(-50%);
-  }
-} */
 
 /* Deal end */
 
