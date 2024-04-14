@@ -38,6 +38,7 @@ menuBg.addEventListener('click', function () {
 
 // // Play music
 let audio = document.getElementById("myAudio");
+audio.play()
 let playButton = document.querySelector(".play-music");
 
 function toggleAudio() {
@@ -83,6 +84,27 @@ tabs.forEach((tab, index) => {
         this.classList.add("active");
         let tabIndex = Array.from(tabs).indexOf(this);
         images[tabIndex].classList.add("active");
+    });
+});
+
+
+
+
+// Elementlarni JavaScript orqali qabul qilib olamiz
+// Elementlarni JavaScript orqali qabul qilib olamiz
+const marqueItems = document.querySelectorAll('.marque-item');
+
+// Har bir marquee elementi uchun animatsiyani boshlaymiz
+marqueItems.forEach(marqueItem => {
+    gsap.to(marqueItem, {
+        x: '-100%', // Elementni chapga olib yuborish uchun
+        duration: 15, // Animatsiya davomiyligi
+        repeat: -1, // To'xtatmasdan takrorlanishi
+        ease: 'linear', // Animatsiya tizimi
+        repeatDelay: 0, // Keyingi takrorlashni kechiktirish (default: 0)
+        onStart: function() {
+            gsap.set(marqueItem, { x: 0 }); // Animatsiya boshlanishida elementlarni boshiga qaytarish
+        }
     });
 });
 
