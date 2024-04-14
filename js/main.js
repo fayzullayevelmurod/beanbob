@@ -38,7 +38,6 @@ menuBg.addEventListener('click', function () {
 
 // // Play music
 let audio = document.getElementById("myAudio");
-audio.play()
 let playButton = document.querySelector(".play-music");
 
 function toggleAudio() {
