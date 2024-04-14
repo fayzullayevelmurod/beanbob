@@ -90,11 +90,8 @@ tabs.forEach((tab, index) => {
 
 
 
-// Elementlarni JavaScript orqali qabul qilib olamiz
-// Elementlarni JavaScript orqali qabul qilib olamiz
-const marqueItems = document.querySelectorAll('.marque-item');
+const marqueItems = document.querySelectorAll('.marque-item1');
 
-// Har bir marquee elementi uchun animatsiyani boshlaymiz
 marqueItems.forEach(marqueItem => {
     gsap.to(marqueItem, {
         x: '-100%', // Elementni chapga olib yuborish uchun
@@ -104,6 +101,22 @@ marqueItems.forEach(marqueItem => {
         repeatDelay: 0, // Keyingi takrorlashni kechiktirish (default: 0)
         onStart: function() {
             gsap.set(marqueItem, { x: 0 }); // Animatsiya boshlanishida elementlarni boshiga qaytarish
+        }
+    });
+});
+
+
+const marqueItems2 = document.querySelectorAll('.marque-item2');
+
+marqueItems2.forEach(marqueItem => {
+    gsap.to(marqueItem, {
+        x: '100%', // Elementni chapga olib yuborish uchun
+        duration: 15, // Animatsiya davomiyligi
+        repeat: -1, // To'xtatmasdan takrorlanishi
+        ease: 'linear', // Animatsiya tizimi
+        repeatDelay: 0, // Keyingi takrorlashni kechiktirish (default: 0)
+        onStart: function() {
+            gsap.set(marqueItem, { x: '-100%' }); // Animatsiya boshlanishida elementlarni boshiga qaytarish
         }
     });
 });

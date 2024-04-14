@@ -469,7 +469,8 @@ button {
     gap: 80px;
     background: rgb(198, 246, 86);
 }
-.marquee-wrap .marque-item{
+.marquee-wrap .marque-item1,
+.marquee-wrap .marque-item2{
     display: flex;
     align-items: center;
     gap: 80px;
@@ -729,6 +730,8 @@ button {
     position: relative;
 }
 .great-marquee1{
+    display: flex;
+    justify-content: end;
     position: absolute;
     top: 230px;
     width: 120%;
