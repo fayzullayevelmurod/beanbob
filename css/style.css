@@ -253,14 +253,30 @@ button {
     height: 51px;
     border-radius: 100%;
     border: 2px solid rgb(57, 99, 51);
+    /* pointer-events: none; */
+}
+.play-music-wrap audio{
+    position: fixed;
+    overflow: hidden;
+    left: 49px;
+    bottom: 49px;
+    width: 100px;
 }
 .play-music .play{
     padding-left: 3px;
+    display: flex;
 }
 .play-music .pause{
+    display: none;
     width: 100%;
     border-radius: 100%;
     mix-blend-mode: color-burn;
+}
+.play-music.active .play{
+    display: none;
+}
+.play-music.active .pause{
+    display: flex;
 }
 /* Play music */
 

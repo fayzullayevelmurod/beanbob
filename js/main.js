@@ -37,20 +37,26 @@ menuBg.addEventListener('click', function () {
 
 
 // // Play music
-let audio = document.getElementById("myAudio");
-let playButton = document.querySelector(".play-music");
 
-function toggleAudio() {
+let audio = new Audio("../music/music.mp3");
+window.addEventListener("load", function() {
+    setTimeout(function() {
+        audio.play();
+    }, 500);
+});
+
+let play = document.querySelector(".play-music");
+play.addEventListener("click", function() {
     if (audio.paused) {
         audio.play();
-        playButton.classList.add("playing");
-        playButton.innerHTML = '<img src="images/icons/pause.png" alt="" class="pause">';
+        this.classList.add("active");
     } else {
         audio.pause();
-        playButton.classList.remove("playing");
-        playButton.innerHTML = '<img src="images/icons/play.svg" alt="" class="play">';
+        this.classList.remove("active");
     }
-}
+});
+
+
 
 
 
