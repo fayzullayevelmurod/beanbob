@@ -37,48 +37,22 @@ menuBg.addEventListener('click', function () {
 
 
 // // Play music
-// let audio = document.getElementById("myAudio");
-// let playButton = document.querySelector(".play-music");
-
-// function toggleAudio() {
-//     if (audio.paused) {
-//         audio.play();
-//         playButton.classList.add("playing");
-//         playButton.innerHTML = '<img src="images/icons/pause.png" alt="" class="pause">';
-//     } else {
-//         audio.pause();
-//         playButton.classList.remove("playing");
-//         playButton.innerHTML = '<img src="images/icons/play.svg" alt="" class="play">';
-//     }
-// }
-
 let audio = document.getElementById("myAudio");
 let playButton = document.querySelector(".play-music");
 
-// Click funksiyasini aniqlash
 function toggleAudio() {
-    // Agar qo'shiq avtomatik ravishda to'xtatilgan bo'lsa
     if (audio.paused) {
-        // Musiqa ijro etish
         audio.play();
-        // tugma rasmini o'zgartirish
         playButton.classList.add("playing");
         playButton.innerHTML = '<img src="images/icons/pause.png" alt="" class="pause">';
     } else {
-        // Agar qo'shiq to'xtatilgan bo'lsa
-        // Musiqa to'xtatish
         audio.pause();
-        // tugma rasmida o'zgarishlar
         playButton.classList.remove("playing");
         playButton.innerHTML = '<img src="images/icons/play.svg" alt="" class="play">';
     }
 }
-setTimeout(function() {
-    audio.setAttribute("autoplay", "true");
-    audio.play();
-    playButton.classList.add("playing");
-    playButton.innerHTML = '<img src="images/icons/pause.png" alt="" class="pause">';
-}, 100);
+
+
 
 // Accordion 
 const items = document.querySelectorAll('.faq-item');
@@ -126,7 +100,7 @@ marqueItems.forEach(marqueItem => {
         repeat: -1,
         ease: 'linear',
         repeatDelay: 0,
-        onStart: function() {
+        onStart: function () {
             gsap.set(marqueItem, { x: 0 });
         }
     });
@@ -142,7 +116,7 @@ marqueItems2.forEach(marqueItem => {
         repeat: -1,
         ease: 'linear',
         repeatDelay: 0,
-        onStart: function() {
+        onStart: function () {
             gsap.set(marqueItem, { x: 0 });
         }
     });
