@@ -37,7 +37,6 @@ menuBg.addEventListener('click', function () {
 
 
 // // Play music
-
 let audio = new Audio("../music/music.mp3");
 window.addEventListener("load", function() {
     setTimeout(function() {
@@ -55,8 +54,6 @@ play.addEventListener("click", function() {
         this.classList.remove("active");
     }
 });
-
-
 
 
 
