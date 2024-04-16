@@ -38,22 +38,31 @@ menuBg.addEventListener('click', function () {
 
 // // Play music
 let audio = new Audio("../music/music.mp3");
-window.addEventListener("load", function() {
-    setTimeout(function() {
-        audio.play();
-    }, 500);
-});
+// window.addEventListener("load", function() {
+//     setTimeout(function() {
+//         audio.play();
+//     }, 500);
+// });
 
-let play = document.querySelector(".play-music");
-play.addEventListener("click", function() {
-    if (audio.paused) {
-        audio.play();
-        this.classList.add("active");
-    } else {
-        audio.pause();
-        this.classList.remove("active");
-    }
-});
+let play = document.querySelectorAll(".play-music, .play_music");
+play.forEach(el => {
+    el.addEventListener("click", function() {
+        if (audio.paused) {
+            audio.play();
+            this.classList.add("active");
+        } else {
+            audio.pause();
+            this.classList.remove("active");
+        }
+    });
+})
+
+let modalClose = document.querySelector('.play_music');
+let modal = document.querySelector('.modal');
+
+modalClose.onclick = () => {
+    modal.style.display = 'none';
+}
 
 
 
