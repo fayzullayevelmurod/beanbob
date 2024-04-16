@@ -64,6 +64,11 @@ modalClose.onclick = () => {
     modal.style.display = 'none';
 }
 
+window.addEventListener("load", function(event) {
+    // setTimeout(() => {
+        modal.style.display = 'block'
+    // }, 2000);
+});
 
 
 // Accordion 
