@@ -549,7 +549,8 @@ button {
 }
 .token-block .token-block-title{
     position: relative;
-    margin-left: -85px;
+    margin-left: -95px;
+    transform: translateY(-15px);
 }
 .token-block .token-block-title h2{
     font-style: italic;
